@@ -1,4 +1,4 @@
-	const API_KEY = 'AIzaSyBGuNILP7_ePJw3PJxGtU11A3lDzwIMd28';
+    const API_KEY = 'AIzaSyBGuNILP7_ePJw3PJxGtU11A3lDzwIMd28';
     const VIDEO_ID = 'W01L70IGBgE';
     const URL = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${VIDEO_ID}&key=${API_KEY}`;
 
