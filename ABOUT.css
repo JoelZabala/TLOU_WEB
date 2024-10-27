@@ -6,6 +6,26 @@ body {
 	text-align: center;
 }
 
+#about-content p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+	text-align: justify;
+	font-family: Fantasy, sans-serif;
+	
+}
+
+#about2-content p {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+	text-align: justify;
+	font-family: Fantasy, sans-serif;
+	
+}
+
 /* layout ng header image */
 .header-image {
     display: flex;             /* maayos na positioning ng image */
@@ -94,3 +114,5 @@ body {
     background-color: rgba(0, 0, 0, 0.2);  /* Semi-transparent background */
     border-radius: 10px;              /* Rounds the corners */
 }
+	
+	

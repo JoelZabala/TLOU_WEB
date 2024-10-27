@@ -1,5 +1,5 @@
 // Function to load cart items from localStorage and display them
-function loadCart() {
+	function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemsDiv = document.getElementById('cart-items');
     let totalPrice = 0;
@@ -49,17 +49,16 @@ window.onload = function () {
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: totalPrice.toFixed(2) // Use the total cart price for the PayPal transaction
+                        value: totalPrice.toFixed(2) 
                     }
                 }]
+				
             });
         },
         onApprove: function (data, actions) {
             return actions.order.capture().then(function (details) {
-                alert('Transaction completed by ' + details.payer.name.given_name);
-                // Optionally clear the cart or redirect to a confirmation page
                 localStorage.removeItem('cart');
-                window.location.href = "confirmation.html"; // Redirect to a confirmation page after successful payment
+                window.location.href = "confirmation.html";
             });
         },
         onError: function (err) {
@@ -67,4 +66,5 @@ window.onload = function () {
             alert('Payment could not be processed.');
         }
     }).render('#paypal-button-container'); // Display PayPal button
+	
 }
