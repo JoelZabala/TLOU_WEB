@@ -7,7 +7,6 @@
 </head>
 <body>
     <div class="content" id="about-content">
-        <!-- YouTube video and description will be dynamically added here first -->
         
         <div class="about">
             <div class="image-container img0">
@@ -46,7 +45,6 @@
                     const videoTitle = videoData.title;
                     const videoDescription = videoData.description;
 
-                    // Display the fetched video details and embed the YouTube video at the top
                     contentDiv.innerHTML = `
                         <h2>${videoTitle}</h2>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/${VIDEO_ID}" 

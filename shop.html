@@ -111,36 +111,27 @@ header {
 	}
 	
 	function addToCart(productName, priceId, quantityId) {
-    // Retrieve product information
     const price = parseInt(document.getElementById(priceId).innerText, 10);
     const quantity = parseInt(document.getElementById(quantityId).value, 10);
 
-    // Create a cart item object
     const cartItem = {
         productName: productName,
         price: price,
         quantity: quantity
     };
 
-    // Retrieve existing cart items from localStorage or create an empty array if none exists
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Check if the item already exists in the cart
     const existingItemIndex = cart.findIndex(item => item.productName === productName);
 
     if (existingItemIndex >= 0) {
-        // If item exists, update its quantity
         cart[existingItemIndex].quantity += quantity;
-        cart[existingItemIndex].price += price;  // Update price accordingly
+        cart[existingItemIndex].price += price; 
     } else {
-        // If item doesn't exist, add it to the cart
         cart.push(cartItem);
     }
 
-    // Save the updated cart to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Optionally alert the user
     alert(`${productName} has been added to the cart!`);
 }
 	</script>

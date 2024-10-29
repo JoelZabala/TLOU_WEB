@@ -33,7 +33,6 @@
         </div>
 
         <div class="banner" id="homepage">
-            <!-- video -->
             <video autoplay muted loop class="home">
                 <source src="homepage.mp4" type="video/mp4">
             </video>
@@ -59,18 +58,16 @@
         const toggleBtn = document.getElementById('toggleBtn');
         const submenuToggles = document.querySelectorAll('.submenu-toggle');
 
-        // Sidebar toggle button logic
         toggleBtn.addEventListener('click', function () {
-            sidebar.classList.toggle('hidden'); // Use class to manage visibility
+            sidebar.classList.toggle('hidden'); 
         });
 
-        // Submenu toggle logic
         submenuToggles.forEach(function(toggle) {
             toggle.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent the link from navigating
+                e.preventDefault(); 
                 const submenu = this.nextElementSibling;
-                submenu.classList.toggle('expanded'); // Toggle 'expanded' class
-                this.classList.toggle('expanded'); // Optionally toggle the submenu toggle class
+                submenu.classList.toggle('expanded'); 
+                this.classList.toggle('expanded'); 
             });
         });
     });
